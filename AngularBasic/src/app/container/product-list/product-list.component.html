@@ -1,4 +1,5 @@
 <!-- structural directive *ngFor -->
+<app-filter [all]="totalProductCount" [InStock]="totalProductInStock" [OutStock]="totalProductOutStock"></app-filter>
 <div class="eKart--products--container">
   <app-product *ngFor="let item of products"[product]="item"></app-product>
 
