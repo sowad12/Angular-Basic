@@ -535,4 +535,9 @@ export class ProductListComponent {
   totalProductCount:number=this.products.length;
   totalProductInStock:number=this.products.filter(x=>x.is_in_inventory===true).length;
   totalProductOutStock:number=this.totalProductCount-this.totalProductInStock;
+  RadioButtonValue:string='all';
+  FilterDataGet(event:string){
+   console.log("eventEmiter parent get"+event);
+   this.RadioButtonValue=event;
+  }
 }

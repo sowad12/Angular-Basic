@@ -1,6 +1,17 @@
 <!-- structural directive *ngFor -->
-<app-filter [all]="totalProductCount" [InStock]="totalProductInStock" [OutStock]="totalProductOutStock"></app-filter>
+<app-filter 
+[all]="totalProductCount" 
+[InStock]="totalProductInStock" 
+[OutStock]="totalProductOutStock"
+(selectedRadioButtonFilter)="FilterDataGet($event)"
+>
+
+</app-filter>
+
 <div class="eKart--products--container">
-  <app-product *ngFor="let item of products"[product]="item"></app-product>
+  <div *ngFor="let item of products">
+    <app-product [product]="item" *ngIf="RadioButtonValue==='all' || item.is_in_inventory.toString()==RadioButtonValue"></app-product>
+  </div>
+
 
 </div>
