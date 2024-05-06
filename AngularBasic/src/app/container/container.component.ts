@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: 'app-container',
+  templateUrl: './container.component.html',
+  styleUrls: ['./container.component.css']
 })
-export class ProductListComponent {
+export class ContainerComponent {
   name:string="sowad";
   counter:number=0;
    product={
@@ -18,6 +18,7 @@ export class ProductListComponent {
 getDiscountPrice(){
   return (this.product.price - (this.product.price * this.product.discountPrice / 100)).toFixed(2)
 } 
+//event binding
 onNameChange(event:any){
 //  console.log(event.target.value)
  this.name=event.target.value

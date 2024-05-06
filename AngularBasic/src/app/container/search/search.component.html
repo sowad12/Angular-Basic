@@ -1,6 +1,8 @@
 <div class="ekart--search--product">
     <!-- <input class="ekart-search-product-input" [value]="searchText" (input)="updateSearch($event)"> -->
+    <!-- [(ngModel)] two way data binding -->
     <input class="ekart-search-product-input" [(ngModel)]="searchText">
     <button class="btn btn-search">Search</button>
 </div>
-<div class="ekart-search-result-for"><p><strong>Search result for:</strong> {{ searchText }}</p></div>
+  <!-- structural directive *ngIf -->
+<div class="ekart-search-result-for"><p *ngIf="searchText!=''"><strong>Search result for:</strong> {{ searchText }}</p></div>

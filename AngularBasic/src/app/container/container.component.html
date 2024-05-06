@@ -1,20 +1,21 @@
 
 <div class="ekart--product--container">
     <!-- <p>product-list works!</p>
+        string interpolation ex:{{product.name}}
 <p>Name: {{product.name}}</p>
 <p>Price: {{'$'+product.price}}</p>
 <p>Color: {{product.color}}</p>
 <p>Discounted Price: ${{getDiscountPrice()}}</p>
 <p>{{ product.stock > 0 ? 'Only ' + product.stock + ' left' : 'None' }}</p>
+property binding ex:[disabled]="!(product.stock>0)
 <button [disabled]="!(product.stock>0)">Button</button>
+event binding ex:<input (input)="onNameChange($event)">
 <input (input)="onNameChange($event)">
 <p>Name:{{name}}</p>
 <button (click)="decrement()">-</button>
 <span>{{counter}}</span>
 <button (click)="increment()">+</button> -->
     <app-search></app-search>
-
-    <div *ngFor="let item of arr">
-      looping item:{{item}}
-    </div>
+    <app-product-list></app-product-list>
+ 
 </div>
